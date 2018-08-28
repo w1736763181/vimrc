@@ -46,13 +46,19 @@ function! JavaScriptFold()
     setl foldtext=FoldText()
 endfunction
 
+"""""""""""""""""""""""""""""""
+" => yaml section
+"""""""""""""""""""""""""""""""
+"au FileType yaml call YamlFold()
+au FileType yaml setl shiftwidth=2
+au FileType yaml setl tabstop=2
 
 """"""""""""""""""""""""""""""
 " => CoffeeScript section
 """""""""""""""""""""""""""""""
 function! CoffeeScriptFold()
-    setl foldmethod=indent
-    setl foldlevelstart=1
+    setlocal foldmethod=indent
+    setlocal foldlevelstart=1
 endfunction
 au FileType coffee call CoffeeScriptFold()
 
